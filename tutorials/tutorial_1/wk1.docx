@@ -1,0 +1,60 @@
+Q2) Since s1 is defined outside all functions, it is called a GLOBAL variable. 
+Therefore s1 is available to all functions, aka visible to all functions and callable
+by any function.
+
+S2 is a local variable and therefore is local to the main function and can only by called
+inside the main function. 
+
+Note:
+- Local variables: variables declared within a block that are local to the block.
+
+When a program is running, it takes up memory. Each running program has its own memory layout, 
+seperated from other programs. The layout consists of a lot of segments, including:
+- stack: stores local variables. 
+- heap: dynamic memory for programmer to allocate
+- data: stores global variables, seperated into initialised and uninitialised
+- text: stored the code being executed
+- operating system: top of a program's memory is reserved for used by the operating system
+
+Local variables and parameters reside in the portion of memory for the stack, therefore this is where 
+s2 will be stored.
+
+S1 is a global variable and therefore is stored in the data section. Unlike the stack, the data region 
+does not grow or shrink - storage space for globals persists for the entire run of the program. 
+
+The pointers s1 and s2 point at the first element of the strings where the memory is held. 
+
+Q3) Variable x is defined in get_num_ptr() function scope only as a local variable and therefore is
+not allocated memory and thus the function is returning the address to a variable that does not exist
+after get_num_ptr() finishes executing.
+
+Therefore there is no value to print at the memeroy address.
+
+Q4) Did not assign the correct number of characters for the string.
+Since we assigned memory for 10 chars, the program will print
+"Hi" and whatever is in the memory space for the other 8 chars. 
+But we do not know what is in these memory spaces.
+
+Q5) In a while loop, we define variable i outside the while loop scope,
+therefore variable i is stored in memory in the main() function scope, hence when
+the while loop scope is returned the variable i still remains in memory. 
+BUT, in a for loop, the variable i is declared only inside the for loop scope,
+therefore once the for loop is returned, the variable is removed from the 
+memory stack and thus cannot be used once the for loop is completed. 
+
+Q6) argc=4
+argv[4] = q6
+argv[4] = I
+argv[4] = love
+argv[4] = MIPS
+
+Q7) The function atoi() is required because the command-line arguments are treated as
+strings. If the command-line arguments are not integers, atoi() will return 0. 
+
+Q8) 
+
+clang -E --> getting the code ready. Turning #includes to C code. 
+
+clang -S --> assembly code
+
+clang -C x.c --> machine code

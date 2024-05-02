@@ -1,0 +1,164 @@
+1521 mipsy --check railroad_runners.s
+Test do_tick_S3_0 (do_tick_S3_0) - failed (Incorrect output)
+Byte 7 of line 63 of your program's output is a non-ascii byte \xef
+Here is line 63 with non-printable characters replaced with backslash-escaped equivalents:
+
+19: !_\xef\xfa
+
+Your program produced these 77 lines of output:
+Checking g_map...
+ 0: btwc 
+ 1: xtbtw
+ 2: c xtb
+ 3: twc x
+ 4: tbtwc
+ 5:  xtbt
+ 6: wc xt
+ 7: btwc 
+ 8: xtbtw
+ 9: c xtb
+10: twc x
+11: tbtwc
+12:  xtbt
+13: wc xt
+14: btwc 
+15: xtbtw
+16: c xtb
+17: twc x
+18: tbtwc
+19:  xtbt
+Checking g_block_spawner...
+next_block[0] = 268501793
+next_block[1] = 268501855
+next_block[2] = 268501743
+next_block[3] = 268501754
+next_block[4] = 268501770
+  safe_column = 2
+Checking g_player...
+           column: 4242
+            state: 2
+action_ticks_left: 0
+         on_train: 1
+            score: 1521
+Calling do_tick with arguments:
+    $a0 = 268501944 (g_map)
+    $a1 = 268502044 (g_player)
+    $a2 = 268501920 (g_block_spawner)
+ Hello from maybe_pick_new_chunk, I've been called by do_tick with the argument:
+        $a0 = 268501920
+    Returning from maybe_pick_new_chunk...
+Returned from do_tick
+Checking g_map...
+ 0: xtbtw
+ 1: c xtb
+ 2: twc x
+ 3: tbtwc
+ 4:  xtbt
+ 5: wc xt
+ 6: btwc 
+ 7: xtbtw
+ 8: c xtb
+ 9: twc x
+10: tbtwc
+11:  xtbt
+12: wc xt
+13: btwc 
+14: xtbtw
+15: c xtb
+16: twc x
+17: tbtwc
+18:  xtbt
+19: !_\xef\xfa
+
+Checking g_block_spawner...
+next_block[0] = 268501793
+next_block[1] = 268501855
+next_block[2] = 268501743
+next_block[3] = 268501754
+next_block[4] = 268501770
+  safe_column = 2
+Checking g_player...
+           column: 4242
+            state: 0
+action_ticks_left: 0
+         on_train: 1
+            score: 1522
+
+The correct 76 lines of output for this test were:
+Checking g_map...
+ 0: btwc 
+ 1: xtbtw
+ 2: c xtb
+ 3: twc x
+ 4: tbtwc
+ 5:  xtbt
+ 6: wc xt
+ 7: btwc 
+ 8: xtbtw
+ 9: c xtb
+10: twc x
+11: tbtwc
+12:  xtbt
+13: wc xt
+14: btwc 
+15: xtbtw
+16: c xtb
+17: twc x
+18: tbtwc
+19:  xtbt
+Checking g_block_spawner...
+next_block[0] = 268501793
+next_block[1] = 268501855
+next_block[2] = 268501743
+next_block[3] = 268501754
+next_block[4] = 268501770
+  safe_column = 2
+Checking g_player...
+           column: 4242
+            state: 2
+action_ticks_left: 0
+         on_train: 1
+            score: 1521
+Calling do_tick with arguments:
+    $a0 = 268501944 (g_map)
+    $a1 = 268502044 (g_player)
+    $a2 = 268501920 (g_block_spawner)
+ Hello from maybe_pick_new_chunk, I've been called by do_tick with the argument:
+        $a0 = 268501920
+    Returning from maybe_pick_new_chunk...
+Returned from do_tick
+Checking g_map...
+ 0: xtbtw
+ 1: c xtb
+ 2: twc x
+ 3: tbtwc
+ 4:  xtbt
+ 5: wc xt
+ 6: btwc 
+ 7: xtbtw
+ 8: c xtb
+ 9: twc x
+10: tbtwc
+11:  xtbt
+12: wc xt
+13: btwc 
+14: xtbtw
+15: c xtb
+16: twc x
+17: tbtwc
+18:  xtbt
+19: c w  
+Checking g_block_spawner...
+next_block[0] = 268501794
+next_block[1] = 268501856
+next_block[2] = 268501744
+next_block[3] = 268501755
+next_block[4] = 268501771
+  safe_column = 2
+Checking g_player...
+           column: 4242
+            state: 0
+action_ticks_left: 0
+         on_train: 1
+            score: 1522
+0 tests passed 1 tests failed

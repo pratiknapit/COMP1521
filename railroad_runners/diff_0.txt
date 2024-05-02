@@ -1,0 +1,282 @@
+1521 mipsy --check railroad_runners.s
+Test display_game_S2_0 ([0] display_game (very short output)) - failed (Incorrect output)
+Your program produced these 81 lines of output:
+Checking g_map...
+ 0: btwc 
+ 1: xtbtw
+ 2: c xtb
+ 3: twc x
+ 4: tbtwc
+ 5:  xtbt
+ 6: wc xt
+ 7: btwc 
+ 8: xtbtw
+ 9: c xtb
+10: twc x
+11: tbtwc
+12:  xtbt
+13: wc xt
+14: btwc 
+15: xtbtw
+16: c xtb
+17: twc x
+18: tbtwc
+19:  xtbt
+Checking g_player...
+           column: 303240213
+            state: 572728357
+action_ticks_left: 842216501
+         on_train: 1111704645
+            score: 1381192789
+Calling display_game with arguments:
+    $a0 = 268501944 (g_map)
+    $a1 = 268502044 (g_player)
+|||||||||\U0001f686|
+|||||\U0001f686|||||
+|\U0001f686||||||  |||
+|||  ||||||\U0001f6a7|
+|||||\U0001f6a7|||||
+|\U0001f6a7||||||\U0001f4b5|||
+|||\U0001f4b5||||||\U0001f686|
+|||||\U0001f686|||||
+|\U0001f686||||||\U0001f9f1|||
+|||\U0001f9f1|||||||
+||||||||||
+|||||||\U0001f686|||
+|||\U0001f686||||||  |
+|||||  |||||
+|  ||||||\U0001f6a7|||
+|||\U0001f6a7||||||\U0001f4b5|
+|||||\U0001f4b5|||||
+|\U0001f4b5||||||\U0001f686|||
+|||\U0001f686||||||\U0001f9f1|
+|||||\U0001f9f1|||||
+Score: 1381192789
+Returned from display_game
+Checking g_map...
+ 0: btwc 
+ 1: xtbtw
+ 2: c xtb
+ 3: twc x
+ 4: tbtwc
+ 5:  xtbt
+ 6: wc xt
+ 7: btwc 
+ 8: xtbtw
+ 9: c xtb
+10: twc x
+11: tbtwc
+12:  xtbt
+13: wc xt
+14: btwc 
+15: xtbtw
+16: c xtb
+17: twc x
+18: tbtwc
+19:  xtbt
+Checking g_player...
+           column: 303240213
+            state: 572728357
+action_ticks_left: 842216501
+         on_train: 1111704645
+            score: 1381192789
+
+The function maybe_print_player was called 100 time(s) in total
+
+The correct 81 lines of output for this test were:
+Checking g_map...
+ 0: btwc 
+ 1: xtbtw
+ 2: c xtb
+ 3: twc x
+ 4: tbtwc
+ 5:  xtbt
+ 6: wc xt
+ 7: btwc 
+ 8: xtbtw
+ 9: c xtb
+10: twc x
+11: tbtwc
+12:  xtbt
+13: wc xt
+14: btwc 
+15: xtbtw
+16: c xtb
+17: twc x
+18: tbtwc
+19:  xtbt
+Checking g_player...
+           column: 303240213
+            state: 572728357
+action_ticks_left: 842216501
+         on_train: 1111704645
+            score: 1381192789
+Calling display_game with arguments:
+    $a0 = 268501944 (g_map)
+    $a1 = 268502044 (g_player)
+|  ||||\U0001f686||\U0001f6a7|||
+|\U0001f686||\U0001f6a7||||\U0001f9f1||\U0001f4b5|
+|||\U0001f9f1||\U0001f4b5|||||
+|\U0001f4b5||||||\U0001f686|||
+|||\U0001f686||||\U0001f686||\U0001f9f1|
+|||\U0001f686||\U0001f9f1||||  |
+|\U0001f9f1||||  |||||
+|  ||||||\U0001f6a7||\U0001f686|
+|||\U0001f6a7||\U0001f686||||\U0001f4b5|
+|\U0001f686||||\U0001f4b5||  |||
+|\U0001f4b5||  ||||\U0001f686||\U0001f6a7|
+|||\U0001f686||\U0001f6a7||||\U0001f9f1|
+|\U0001f6a7||||\U0001f9f1||\U0001f4b5|||
+|\U0001f9f1||\U0001f4b5||||||\U0001f686|
+|||||\U0001f686||||\U0001f686|
+|\U0001f686||||\U0001f686||\U0001f9f1|||
+|\U0001f686||\U0001f9f1||||  |||
+|||  ||||||\U0001f6a7|
+|||||\U0001f6a7||\U0001f686|||
+|\U0001f6a7||\U0001f686||||\U0001f4b5||  |
+Score: 1381192789
+Returned from display_game
+Checking g_map...
+ 0: btwc 
+ 1: xtbtw
+ 2: c xtb
+ 3: twc x
+ 4: tbtwc
+ 5:  xtbt
+ 6: wc xt
+ 7: btwc 
+ 8: xtbtw
+ 9: c xtb
+10: twc x
+11: tbtwc
+12:  xtbt
+13: wc xt
+14: btwc 
+15: xtbtw
+16: c xtb
+17: twc x
+18: tbtwc
+19:  xtbt
+Checking g_player...
+           column: 303240213
+            state: 572728357
+action_ticks_left: 842216501
+         on_train: 1111704645
+            score: 1381192789
+
+The function maybe_print_player was called 100 time(s) in total
+
+The difference between your output(-) and the correct output(+) is:
+  Checking g_map...
+   0: btwc 
+   1: xtbtw
+   2: c xtb
+   3: twc x
+   4: tbtwc
+   5:  xtbt
+   6: wc xt
+   7: btwc 
+   8: xtbtw
+   9: c xtb
+  10: twc x
+  11: tbtwc
+  12:  xtbt
+  13: wc xt
+  14: btwc 
+  15: xtbtw
+  16: c xtb
+  17: twc x
+  18: tbtwc
+  19:  xtbt
+  Checking g_player...
+             column: 303240213
+              state: 572728357
+  action_ticks_left: 842216501
+           on_train: 1111704645
+              score: 1381192789
+  Calling display_game with arguments:
+      $a0 = 268501944 (g_map)
+      $a1 = 268502044 (g_player)
++ |  ||||🚆||🚧|||
++ |🚆||🚧||||🧱||💵|
++ |||🧱||💵|||||
++ |💵||||||🚆|||
++ |||🚆||||🚆||🧱|
++ |||🚆||🧱||||  |
++ |🧱||||  |||||
+- |||||||||🚆|
+?       ^
+
++ |  ||||||🚧||🚆|
+? +++      ^
+
+- |||||🚆|||||
++ |||🚧||🚆||||💵|
+?    +       +
+
+- |🚆||||||  |||
++ |🚆||||💵||  |||
+?       +
+
++ |💵||  ||||🚆||🚧|
++ |||🚆||🚧||||🧱|
++ |🚧||||🧱||💵|||
++ |🧱||💵||||||🚆|
++ |||||🚆||||🚆|
++ |🚆||||🚆||🧱|||
++ |🚆||🧱||||  |||
+  |||  ||||||🚧|
+- |||||🚧|||||
++ |||||🚧||🚆|||
+?         +
+
+- |🚧||||||💵|||
+- |||💵||||||🚆|
+- |||||🚆|||||
+- |🚆||||||🧱|||
+- |||🧱|||||||
+- ||||||||||
+- |||||||🚆|||
+- |||🚆||||||  |
++ |🚧||🚆||||💵||  |
+?  +       +
+
+- |||||  |||||
+- |  ||||||🚧|||
+- |||🚧||||||💵|
+- |||||💵|||||
+- |💵||||||🚆|||
+- |||🚆||||||🧱|
+- |||||🧱|||||
+  Score: 1381192789
+  Returned from display_game
+  Checking g_map...
+   0: btwc 
+   1: xtbtw
+   2: c xtb
+   3: twc x
+   4: tbtwc
+   5:  xtbt
+   6: wc xt
+   7: btwc 
+   8: xtbtw
+   9: c xtb
+  10: twc x
+  11: tbtwc
+  12:  xtbt
+  13: wc xt
+  14: btwc 
+  15: xtbtw
+  16: c xtb
+  17: twc x
+  18: tbtwc
+  19:  xtbt
+  Checking g_player...
+             column: 303240213
+              state: 572728357
+  action_ticks_left: 842216501
+           on_train: 1111704645
+              score: 1381192789
+  
+  The function maybe_print_player was called 100 time(s) in total
+0 tests passed 1 tests failed
